@@ -1,5 +1,15 @@
 # Knowledge-based AI decision support for digital transformation readiness
 
+The latest manuscript is the *Knowledge-Based Systems* short communication in `kcid-kbs/`.
+
+**A knowledge-based AI decision-support system for cybersecurity-aware digital transformation using innovation and entrepreneurship data**
+
+Open `kcid-kbs/KCID-AI_manuscript.pdf`. The source is `kcid-kbs/paper.md`, and `kcid-kbs/analysis.py` rebuilds the figures, tables, and `results.json`.
+
+The earlier readiness-score package remains in this directory.
+
+## Earlier package
+
 Replication package for the short communication:
 
 **A knowledge-based AI decision-support model for predicting digital transformation readiness from enterprise innovation data**
