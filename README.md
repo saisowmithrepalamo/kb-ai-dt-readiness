@@ -1,10 +1,13 @@
 # Knowledge-based AI decision support for digital transformation readiness
 
-The latest manuscript is the *Knowledge-Based Systems* short communication in `kcid-kbs/`.
+The latest manuscript is the *Knowledge-Based Systems* full-length research article in `kcid-kbs/`.
 
-**A knowledge-based AI decision-support system for cybersecurity-aware digital transformation using innovation and entrepreneurship data**
+**A knowledge-based AI decision-support system for cybersecurity-aware digital transformation screening using innovation and entrepreneurship indicators**
 
-Open `kcid-kbs/KCID-AI_manuscript.pdf`. The source is `kcid-kbs/paper.md`, and `kcid-kbs/analysis.py` rebuilds the figures, tables, and `results.json`.
+Open `kcid-kbs/KCID-AI_manuscript.pdf`. The source is `kcid-kbs/paper.md`, and the supplementary material is `kcid-kbs/supplementary_material.md`.
+
+- `kcid-kbs/analysis.py` rebuilds Figures 1–2, the first six rows of Table 1, Supplementary Table S1 and `results.json`.
+- `kcid-kbs/sensitivity.py` imports `analysis.py` and rebuilds the remaining rows of Table 1, Table 2 (50 regenerated populations), the payoff grid (`payoff_sensitivity.csv`), Supplementary Fig. S1 (`Figure_3.png`) and `sensitivity_results.json`. It also evaluates the boosting-plus-rules, expected-utility, capped expected-utility, rule-only and hybrid policies. Runtime is about 2–3 minutes.
 
 The earlier readiness-score package remains in this directory.
 
