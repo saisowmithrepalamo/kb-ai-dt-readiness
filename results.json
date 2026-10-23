@@ -1,0 +1,275 @@
+{
+  "seed": 23,
+  "n": 5000,
+  "n_train": 3750,
+  "n_test": 1250,
+  "intercept": -2.315877914428711,
+  "prevalence": 0.4,
+  "test_prevalence": 0.4,
+  "data_intensity_train_median": 0.502362887813268,
+  "codification_cutoff": 0.4,
+  "decision_threshold": 0.5,
+  "descriptives": [
+    {
+      "indicator": "R&D intensity",
+      "role": "Innovation and data",
+      "mean": 0.10482686821818056,
+      "sd": 0.03735892450831295,
+      "p10": 0.05415431703318671,
+      "p90": 0.1552082011726982,
+      "corr_ready": 0.10495145382003863
+    },
+    {
+      "indicator": "Patent stock (log)",
+      "role": "Innovation and data",
+      "mean": 1.346738400080493,
+      "sd": 0.5317900112652217,
+      "p10": 0.63024446105443,
+      "p90": 2.062566721818759,
+      "corr_ready": 0.11029824493981719
+    },
+    {
+      "indicator": "Product innovation",
+      "role": "Innovation and data",
+      "mean": 0.49804791662317277,
+      "sd": 0.2116916475103125,
+      "p10": 0.21731742298545845,
+      "p90": 0.7813301964452799,
+      "corr_ready": 0.10963119472789286
+    },
+    {
+      "indicator": "Process innovation",
+      "role": "Innovation and data",
+      "mean": 0.4994356053512782,
+      "sd": 0.1937562908892079,
+      "p10": 0.242334900257144,
+      "p90": 0.7561552093245657,
+      "corr_ready": 0.11808030435485978
+    },
+    {
+      "indicator": "Collaboration breadth",
+      "role": "Innovation and data",
+      "mean": 0.49985612499172255,
+      "sd": 0.18982212509893484,
+      "p10": 0.253169019280289,
+      "p90": 0.754964483707842,
+      "corr_ready": 0.15080113837889145
+    },
+    {
+      "indicator": "Data intensity",
+      "role": "Innovation and data",
+      "mean": 0.5018887105353398,
+      "sd": 0.20731683323074784,
+      "p10": 0.22184962430276306,
+      "p90": 0.7775923182361572,
+      "corr_ready": 0.1419320925230303
+    },
+    {
+      "indicator": "Knowledge codification",
+      "role": "Knowledge process",
+      "mean": 0.5028950142153852,
+      "sd": 0.20486812396141738,
+      "p10": 0.22897463795808057,
+      "p90": 0.7772560622699237,
+      "corr_ready": 0.2625919529308005
+    },
+    {
+      "indicator": "Knowledge sharing",
+      "role": "Knowledge process",
+      "mean": 0.5032755431472373,
+      "sd": 0.19546747623043967,
+      "p10": 0.24205618883558538,
+      "p90": 0.7647240500470758,
+      "corr_ready": 0.2725729077998613
+    },
+    {
+      "indicator": "Training intensity",
+      "role": "Knowledge process",
+      "mean": 0.5045275597181039,
+      "sd": 0.17757828233404555,
+      "p10": 0.2662551037008412,
+      "p90": 0.7391915521594931,
+      "corr_ready": 0.21009879184234362
+    },
+    {
+      "indicator": "Digital skills",
+      "role": "Knowledge process",
+      "mean": 0.5041705927791724,
+      "sd": 0.20699477600126992,
+      "p10": 0.22618150673858833,
+      "p90": 0.781565875054057,
+      "corr_ready": 0.1416340474570453
+    }
+  ],
+  "performance": [
+    {
+      "model": "Data-only logistic",
+      "features": "Six innovation and data indicators",
+      "auc": 0.6197866666666667,
+      "brier": 0.22918691186022155,
+      "balanced_accuracy": 0.5713333333333334,
+      "fpr_data_rich_knowledge_poor": 0.12030075187969924,
+      "n_slice": 188,
+      "auc_ci_low": 0.5901356589769317,
+      "auc_ci_high": 0.6513335039221898
+    },
+    {
+      "model": "Data-only gradient boosting",
+      "features": "Same six indicators, black-box AI",
+      "auc": 0.6050986666666667,
+      "brier": 0.2326151995653249,
+      "balanced_accuracy": 0.5616666666666666,
+      "fpr_data_rich_knowledge_poor": 0.18045112781954886,
+      "n_slice": 188,
+      "auc_ci_low": 0.5743158421376764,
+      "auc_ci_high": 0.6350630115926461
+    },
+    {
+      "model": "Knowledge-based logistic",
+      "features": "Innovation index, data, knowledge index, and data \u00d7 knowledge",
+      "auc": 0.6705653333333333,
+      "brier": 0.21875975320279709,
+      "balanced_accuracy": 0.6063333333333334,
+      "fpr_data_rich_knowledge_poor": 0.03759398496240601,
+      "n_slice": 188,
+      "auc_ci_low": 0.6395530692453231,
+      "auc_ci_high": 0.7010122883501971
+    }
+  ],
+  "auc_gaps": {
+    "knowledge_minus_logistic": {
+      "difference": 0.05009765312404545,
+      "ci_low": 0.02192767018206701,
+      "ci_high": 0.07686717837076376
+    },
+    "knowledge_minus_boosting": {
+      "difference": 0.06446441112237127,
+      "ci_low": 0.03308503844249811,
+      "ci_high": 0.09447027055119253
+    }
+  },
+  "coefficients": [
+    {
+      "feature": "Innovation index",
+      "log_odds": 0.11173478491826988,
+      "odds_ratio": 1.1182162534993758
+    },
+    {
+      "feature": "Data intensity",
+      "log_odds": 0.2073280666500493,
+      "odds_ratio": 1.230386154240049
+    },
+    {
+      "feature": "Knowledge index",
+      "log_odds": 0.5286124022967792,
+      "odds_ratio": 1.6965765088783318
+    },
+    {
+      "feature": "Data \u00d7 knowledge",
+      "log_odds": 0.02719108005824994,
+      "odds_ratio": 1.0275641310196955
+    },
+    {
+      "feature": "Intercept",
+      "log_odds": -0.4455147695667435,
+      "odds_ratio": 0.6404944840880976
+    }
+  ],
+  "curves": [
+    {
+      "data_band": "High data intensity",
+      "quintile": "Q1",
+      "n": 102,
+      "observed": 0.2549019607843137,
+      "observed_se": 0.04315123327397445,
+      "knowledge_model": 0.2986007180942401,
+      "data_only_model": 0.4200109147157549
+    },
+    {
+      "data_band": "High data intensity",
+      "quintile": "Q2",
+      "n": 118,
+      "observed": 0.3559322033898305,
+      "observed_se": 0.044076634916838824,
+      "knowledge_model": 0.38568614810868407,
+      "data_only_model": 0.4334039201153174
+    },
+    {
+      "data_band": "High data intensity",
+      "quintile": "Q3",
+      "n": 127,
+      "observed": 0.4015748031496063,
+      "observed_se": 0.043499704101171294,
+      "knowledge_model": 0.4381118044259934,
+      "data_only_model": 0.4615872036623783
+    },
+    {
+      "data_band": "High data intensity",
+      "quintile": "Q4",
+      "n": 135,
+      "observed": 0.5555555555555556,
+      "observed_se": 0.042766686606638946,
+      "knowledge_model": 0.4926737326349593,
+      "data_only_model": 0.4767834701589293
+    },
+    {
+      "data_band": "High data intensity",
+      "quintile": "Q5",
+      "n": 143,
+      "observed": 0.6923076923076923,
+      "observed_se": 0.038595785077250346,
+      "knowledge_model": 0.5933063907742571,
+      "data_only_model": 0.4958359002950215
+    },
+    {
+      "data_band": "Low data intensity",
+      "quintile": "Q1",
+      "n": 148,
+      "observed": 0.20270270270270271,
+      "observed_se": 0.033045251224822575,
+      "knowledge_model": 0.22674637180770194,
+      "data_only_model": 0.3056364371760546
+    },
+    {
+      "data_band": "Low data intensity",
+      "quintile": "Q2",
+      "n": 132,
+      "observed": 0.25,
+      "observed_se": 0.037688918072220454,
+      "knowledge_model": 0.2753702699098324,
+      "data_only_model": 0.3195663996892207
+    },
+    {
+      "data_band": "Low data intensity",
+      "quintile": "Q3",
+      "n": 123,
+      "observed": 0.3252032520325203,
+      "observed_se": 0.04223878086478155,
+      "knowledge_model": 0.3434739408381129,
+      "data_only_model": 0.34710458825331164
+    },
+    {
+      "data_band": "Low data intensity",
+      "quintile": "Q4",
+      "n": 115,
+      "observed": 0.40869565217391307,
+      "observed_se": 0.04584126829454693,
+      "knowledge_model": 0.39509133799956,
+      "data_only_model": 0.3615365546289224
+    },
+    {
+      "data_band": "Low data intensity",
+      "quintile": "Q5",
+      "n": 107,
+      "observed": 0.5327102803738317,
+      "observed_se": 0.04823327636745122,
+      "knowledge_model": 0.481705019755504,
+      "data_only_model": 0.3840324839405588
+    }
+  ],
+  "slice_ready_rate": 0.2925531914893617,
+  "high_data_ready_by_codification_tail": {
+    "low_codification_observed": 0.2549019607843137,
+    "high_codification_observed": 0.6923076923076923
+  }
+}

@@ -1,0 +1,4 @@
+model,features,auc_95ci,brier,balanced_accuracy,fpr_data_rich_knowledge_poor,n_slice
+Data-only logistic,Six innovation and data indicators,0.620 (0.590–0.651),0.229,0.571,0.120,188
+Data-only gradient boosting,"Same six indicators, black-box AI",0.605 (0.574–0.635),0.233,0.562,0.180,188
+Knowledge-based logistic,"Innovation index, data, knowledge index, and data × knowledge",0.671 (0.640–0.701),0.219,0.606,0.038,188

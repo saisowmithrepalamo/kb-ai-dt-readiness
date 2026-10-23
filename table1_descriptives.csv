@@ -1,0 +1,11 @@
+indicator,role,mean,sd,p10,p90,corr_ready
+R&D intensity,Innovation and data,0.105,0.037,0.054,0.155,0.105
+Patent stock (log),Innovation and data,1.347,0.532,0.630,2.063,0.110
+Product innovation,Innovation and data,0.498,0.212,0.217,0.781,0.110
+Process innovation,Innovation and data,0.499,0.194,0.242,0.756,0.118
+Collaboration breadth,Innovation and data,0.500,0.190,0.253,0.755,0.151
+Data intensity,Innovation and data,0.502,0.207,0.222,0.778,0.142
+Knowledge codification,Knowledge process,0.503,0.205,0.229,0.777,0.263
+Knowledge sharing,Knowledge process,0.503,0.195,0.242,0.765,0.273
+Training intensity,Knowledge process,0.505,0.178,0.266,0.739,0.210
+Digital skills,Knowledge process,0.504,0.207,0.226,0.782,0.142
