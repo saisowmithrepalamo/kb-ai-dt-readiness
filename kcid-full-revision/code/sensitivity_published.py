@@ -33,7 +33,7 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else HERE))
-import analysis as A  # noqa: E402
+import analysis_published as A  # noqa: E402
 
 N_SEEDS = 50
 BASE = {"retain": 0.55, "h_cost": 5.0, "resid": 0.35, "penalty": 8.0, "t_launch": 10.0, "t_defer": -5.0}

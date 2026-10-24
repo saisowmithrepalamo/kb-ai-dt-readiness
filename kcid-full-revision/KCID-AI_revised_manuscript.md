@@ -87,7 +87,7 @@ Two explanation measures apply to every policy. Reason coverage is the share of 
 
 ## 3. Simulation and evaluation design
 
-Seed 23 generates 5,000 initiatives from four independent standard-normal latent factors for innovation, entrepreneurship, data intensity and control maturity. Breadth also loads on innovation and data. Indicators are logistic transforms of these factors plus noise. The latent breach log-odds rise with sensitivity, volume, breadth and entrepreneurship. They also rise with three control-gap terms, which are sensitivity minus access, volume minus monitoring, and an encryption gap at high sensitivity, and with the venture-gap indicator. They fall slightly with access and monitoring. The intercept is set by bisection so that the mean latent probability is 0.36. The realised prevalence is 0.358. The coefficients are listed in the public `analysis.py`. They are not printed in this manuscript.
+Seed 23 generates 5,000 initiatives from four independent standard-normal latent factors for innovation, entrepreneurship, data intensity and control maturity. Breadth also loads on innovation and data. Indicators are logistic transforms of these factors plus noise. The latent breach log-odds rise with sensitivity, volume, breadth and entrepreneurship. They also rise with three control-gap terms, which are sensitivity minus access, volume minus monitoring, and an encryption gap at high sensitivity, and with the venture-gap indicator. They fall slightly with access and monitoring. The intercept is set by bisection so that the mean latent probability is 0.36. The realised prevalence is 0.358. The coefficients are listed in `code/analysis_published.py`. They are not printed in this manuscript.
 
 A stratified split gives 3,749 training and 1,251 test initiatives, with 448 test breaches. Fitting and standardisation use the training data only. The subgroup is defined from training-sample quantiles before any test metric is computed: data volume at or above the training median (0.493) and access control at or below the training 40th percentile (0.435). It contains 256 test initiatives and 156 breaches. It was not registered outside this study.
 
@@ -97,13 +97,13 @@ Two sensitivity analyses cover dependence on one population and on constants we 
 
 ### 3.1 Pre-specified checks
 
-Three checks were fixed before their test results were inspected. They do not retune the rules, the payoffs or the thresholds. `run_corrections.py` runs them under the library versions in Section 2.3.
+Three checks were fixed before their test results were inspected. They do not retune the rules, the payoffs or the thresholds. `code/run_corrections.py` runs them under the library versions in Section 2.3.
 
 The corrected protocol splits each training sample, before any test metric, into a fit sample (80%) and a validation sample (20%), stratified on the breach label. The validation split seed is the replication seed plus 7,919. Logistic *C* is chosen from {0.1, 1, 10} by mean log loss in stratified 3-fold cross-validation on the fit sample. Boosting is chosen the same way from two candidates: the published setting, and a smaller one with 100 trees, a learning rate of 0.10, a maximum depth of 2 and the same subsample of 0.85. The selected models are fit on the fit sample only. A Platt map, a logistic regression with *C* = 10^6 of the label on the logit of the predicted probability, is fit on the validation sample only and applied to the test probabilities. Subgroup cutoffs are the fit-sample quantiles. The capped policy's *λ* is bisected on the validation sample, then frozen. Because the fit sample is smaller than the training sample in Tables 1 and 2, corrected utilities are not paired with those tables. Contrasts are compared within a protocol.
 
 A second check keeps the published probabilities and moves only *λ*. It is bisected on in-sample training predictions and then applied to the test set. Those predictions are not held out. The check asks whether fitting *λ* on the test portfolio changes the comparison. It is not a validation sample.
 
-The alternative generator uses the same indicators, the same payoff formulas and the same target mean latent probability of 0.36. It drops the clipped control-gap terms and the venture-gap indicator that repeats rule r6. Breach log-odds then depend on sensitivity, volume, breadth and entrepreneurship, on main effects of access, monitoring and encryption, and on three smooth shortfalls: sensitivity times one minus access, volume times one minus monitoring, and sensitivity times one minus encryption. The coefficients are in `run_corrections.py`. They were not changed after the run. The rules are unchanged, so r6 no longer copies a term in the label.
+The alternative generator uses the same indicators, the same payoff formulas and the same target mean latent probability of 0.36. It drops the clipped control-gap terms and the venture-gap indicator that repeats rule r6. Breach log-odds then depend on sensitivity, volume, breadth and entrepreneurship, on main effects of access, monitoring and encryption, and on three smooth shortfalls: sensitivity times one minus access, volume times one minus monitoring, and sensitivity times one minus encryption. The coefficients are in `code/run_corrections.py`. They were not changed after the run. The rules are unchanged, so r6 no longer copies a term in the label.
 
 ## 4. Results
 
@@ -179,7 +179,7 @@ The hybrid inherits the capped policy's utility. It has higher utility than KCID
 | Hybrid | 21.10 (19.85–22.95) | 0.388 (0.343–0.428) | 0.093 (0.044–0.179) | 4/50 | 30/50 |
 | KCID-AI | 20.82 (19.66–22.66) | 0.386 (0.341–0.433) | 0.087 (0.039–0.152) | — | — |
 
-*Note.* Entries are means across replications, with 2.5th–97.5th percentiles in parentheses. The last two columns count replications in which the paired difference favours KCID-AI. Against the capped policy, KCID-AI launches more breaches in 15 replications and the same number in 5. Against the hybrid, those counts are 16 and 4. Each replication regenerates the population, the split, the subgroup cutoffs and the fits. `sensitivity.py` produces the values.
+*Note.* Entries are means across replications, with 2.5th–97.5th percentiles in parentheses. The last two columns count replications in which the paired difference favours KCID-AI. Against the capped policy, KCID-AI launches more breaches in 15 replications and the same number in 5. Against the hybrid, those counts are 16 and 4. Each replication regenerates the population, the split, the subgroup cutoffs and the fits. `code/sensitivity_published.py` produces the values.
 
 Supplementary Note S1 and Fig. S1 vary the payoff and policy constants on the seed-23 fits. The feature effect is positive in all 26 settings (0.68 to 1.58). The rules' utility effect changes sign (−0.25 to 0.23). The soft penalties, not the hard exclusions, drive the rule-based drop in launched breaches. The capped and hybrid policies have higher utility than KCID-AI in 20 of the 26 settings. Where hardening is attractive, the uncapped expected-utility policy already launches fewer breaches than KCID-AI.
 
@@ -208,7 +208,7 @@ The alternative generator changes the claim that does not survive. Under the cor
 | Uncapped expected-utility − KCID-AI | 0.48 (0.10 to 0.82); 49/50 | 0.41 (−0.09 to 0.87); 47/50 | 0.49 (−0.003 to 0.94); 48/50 |
 | KCID-AI − rule-only | 1.72 (0.65 to 2.83); 50/50 | 1.76 (0.65 to 2.91); 50/50 | 1.16 (0.31 to 2.14); 49/50 |
 
-*Note.* Each entry is the mean paired difference, the 2.5th to 97.5th percentile, and the number of replications in which the difference is positive. The published column uses the test-set *λ* from Table 2. The corrected columns freeze *λ* on the validation sample and fit on 80% of the training split, so their utility levels are not paired with Table 2. `run_corrections.py` writes `results_new/full50_replications.csv`.
+*Note.* Each entry is the mean paired difference, the 2.5th to 97.5th percentile, and the number of replications in which the difference is positive. The published column uses the test-set *λ* from Table 2. The corrected columns freeze *λ* on the validation sample and fit on 80% of the training split, so their utility levels are not paired with Table 2. `code/run_corrections.py` writes `results_new/full50_replications.csv`.
 
 ## 5. Discussion and limitations
 
@@ -242,7 +242,7 @@ This research did not receive any specific grant from funding agencies in the pu
 
 ## Data availability
 
-The synthetic data are generated by `analysis.py` (seed 23), which also produces Table 1, Supplementary Table S1, Figs. 1–2 and `results.json`. `sensitivity.py` produces Table 2, Supplementary Fig. S1 and `sensitivity_results.json`. `run_corrections.py` produces Table 3 and `results_new/full50_replications.csv`. The published pipeline is publicly available at https://github.com/saisowmithrepalamo/kb-ai-dt-readiness (folder `kcid-kbs`). No human-participant data and no real enterprise breach records were used.
+The files for this article are at https://github.com/saisowmithrepalamo/kb-ai-dt-readiness/tree/kcid-corrected-checks/kcid-full-revision. Seed 23, Table 1, Supplementary Table S1 and Figs. 1–2 come from `code/analysis_published.py`. Table 2 and Supplementary Fig. S1 come from `code/sensitivity_published.py`; the figure file in this folder was drawn from `results_original/sensitivity_results.json`. Table 3 comes from `code/run_corrections.py` (`results_new/full50_replications.csv`). The second-machine boosting check is `results_new/cloud_full50_replications.csv`. No human-participant data and no real enterprise breach records were used.
 
 ## Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
 
