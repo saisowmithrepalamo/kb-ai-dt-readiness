@@ -1,6 +1,6 @@
 # Knowledge-based AI decision support for digital transformation
 
-This repository holds the code, data outputs and manuscripts for two related papers. Both use reproducible **synthetic** data; no real firm or breach records are included.
+This repository holds the code and data outputs for two related papers, and the manuscript of the earlier one. Both use reproducible **synthetic** data; no real firm or breach records are included.
 
 | Folder | Paper | Status |
 |---|---|---|
@@ -11,19 +11,9 @@ This repository holds the code, data outputs and manuscripts for two related pap
 
 ## Current paper: KCID-AI (`kcid-kbs/`)
 
-**A knowledge-based AI decision-support system for cybersecurity-aware digital transformation screening using innovation and entrepreneurship indicators**
+**Breach-risk models and security rules for screening digital transformation initiatives**
 
-### Read the paper
-
-| File | What it is |
-|---|---|
-| [`KCID-AI_manuscript.pdf`](kcid-kbs/KCID-AI_manuscript.pdf) | The manuscript (20 double-spaced pages) |
-| [`paper.docx`](kcid-kbs/paper.docx) | Word version for submission |
-| [`paper.md`](kcid-kbs/paper.md) | Editable source text |
-| [`supplementary_material.md`](kcid-kbs/supplementary_material.md) / [`.docx`](kcid-kbs/supplementary_material.docx) | Table S1, Note S1 and Fig. S1 |
-| [`highlights.txt`](kcid-kbs/highlights.txt) | Five highlights for the submission system |
-
-Author name, affiliation and email are left blank in the manuscript files.
+The manuscript is not posted here while it is under consideration at a journal. The folder holds the code, the simulated dataset and every result file; [`kcid-kbs/README.md`](kcid-kbs/README.md) describes each file, the dataset's columns, which script produces which table and figure, and how to reproduce them.
 
 ### What the study does
 
@@ -42,9 +32,9 @@ The paper compares KCID-AI with eleven other policies on a synthetic population 
 - A hybrid of KCID-AI's hard rules and that capped policy matches the capped policy's utility. In every replication, though, it explains fewer non-launch decisions with a named rule and launches more initiatives that carry a flagged control gap.
 - In short, the rule layer buys rule-consistent, auditable decisions, not a better utility–risk trade-off. A rule-only policy without the probability score is worse on both utility and launched breaches.
 
-### Reproduce every number
+### Reproduce
 
-Requires Python 3 (versions are pinned in `kcid-kbs/requirements.txt`).
+From `kcid-kbs/`, with the versions pinned in `kcid-kbs/requirements.txt`:
 
 ```bash
 cd kcid-kbs
@@ -54,21 +44,11 @@ pip install -r requirements.txt
 export MPLCONFIGDIR="$(pwd)/.mplconfig"
 python analysis.py
 python sensitivity.py
+python extensions.py
+python export_dataset.py
 ```
 
-Run `analysis.py` first; `sensitivity.py` imports it. `analysis.py` takes about 20 seconds and `sensitivity.py` about 2–3 minutes. With the pinned versions, both scripts reproduce the committed JSON, CSV and PNG files exactly. Afterwards, `git status` lists only the three PDF figures, which differ only in their embedded creation date.
-
-| Script | Writes | Used in the paper for |
-|---|---|---|
-| `analysis.py` | `results.json`, `table1_descriptives.csv`, `table2_performance.csv`, `Figure_1.png/.pdf`, `Figure_2.png/.pdf` | Figs. 1–2, the first six rows of Table 1, Supplementary Table S1 |
-| `sensitivity.py` | `sensitivity_results.json`, `payoff_sensitivity.csv`, `Figure_3.png/.pdf` | The remaining rows of Table 1, Table 2, Supplementary Note S1 and Fig. S1 |
-| `extensions.py` | `extensions_results.json`, `generator_variants.csv`, `joint_sensitivity.csv`, `Figure_4.png/.pdf` | Revision robustness checks: calibration, cross-validated boosting, generator structures, joint sensitivity ([details](kcid-kbs/README_extensions.md)) |
-
 Fixed settings: population seed 23, bootstrap seed 24 with 1,000 resamples, replication seeds 1–50.
-
-### Other files
-
-`kcid-kbs/review/` contains notes from an earlier editing pass of the short-communication version of this paper. They are kept for the record and are superseded by the current manuscript.
 
 ---
 
