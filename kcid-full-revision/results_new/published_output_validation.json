@@ -1,0 +1,195 @@
+{
+  "n_checks": 27,
+  "n_failed": 0,
+  "checks": [
+    {
+      "check": "n",
+      "got": 5000,
+      "expected": 5000,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "n_train",
+      "got": 3749,
+      "expected": 3749,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "n_test",
+      "got": 1251,
+      "expected": 1251,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "breach_rate_rounded",
+      "got": 0.358,
+      "expected": 0.358,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "hard_rate_percent",
+      "got": 9.3,
+      "expected": 9.3,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "q1_rate",
+      "got": 0.7175572519083969,
+      "expected": 0.7175572519083969,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "q5_rate",
+      "got": 0.25757575757575757,
+      "expected": 0.25757575757575757,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "q1_wilson_lo",
+      "got": 0.6351200315630191,
+      "expected": 0.635120031563019,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "q1_wilson_hi",
+      "got": 0.7875981800274693,
+      "expected": 0.7875981800274693,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "q5_wilson_lo",
+      "got": 0.19057354975943827,
+      "expected": 0.19057354975943824,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "q5_wilson_hi",
+      "got": 0.3382894789445816,
+      "expected": 0.33828947894458167,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "quintile_n",
+      "got": 656,
+      "expected": 656,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "quintile_breaches",
+      "got": 284,
+      "expected": 284,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "utility_diff_seed23",
+      "got": 1.2110695752807992,
+      "expected": 1.211,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "launched_kcid",
+      "got": 170,
+      "expected": 170,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "launched_data",
+      "got": 198,
+      "expected": 198,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "capped_kcid_fewer",
+      "got": 30,
+      "expected": 30,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "capped_kcid_more",
+      "got": 15,
+      "expected": 15,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "capped_tie",
+      "got": 5,
+      "expected": 5,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "hybrid_kcid_fewer",
+      "got": 30,
+      "expected": 30,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "hybrid_kcid_more",
+      "got": 16,
+      "expected": 16,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "hybrid_tie",
+      "got": 4,
+      "expected": 4,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "utility_vs_opportunity_all",
+      "got": 50,
+      "expected": 50,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "utility_vs_rules_all",
+      "got": 50,
+      "expected": 50,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "capping_cost_paired",
+      "got": -0.1951604178406201,
+      "expected": -0.195,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "seed23_launch_count_equal",
+      "got": 172,
+      "expected": 172,
+      "ok": true,
+      "note": ""
+    },
+    {
+      "check": "seed23_utility_not_identical",
+      "got": 0,
+      "expected": 0,
+      "ok": true,
+      "note": "Equal launch counts with unequal utility means the action sets differ off the launch margin."
+    }
+  ]
+}

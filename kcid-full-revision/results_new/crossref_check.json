@@ -1,0 +1,311 @@
+[
+  {
+    "n": "1",
+    "doi": "10.1016/j.jsis.2019.01.003",
+    "year": 2019,
+    "vol": "28",
+    "page": "118-144",
+    "container": "The Journal of Strategic Information Systems",
+    "title": "Understanding digital transformation: A review and a research agenda",
+    "authors": "Vial, Gregory",
+    "ok": true
+  },
+  {
+    "n": "2",
+    "doi": "10.1111/etap.12254",
+    "year": 2017,
+    "vol": "41",
+    "page": "1029-1055",
+    "container": "Entrepreneurship Theory and Practice",
+    "title": "Digital Entrepreneurship: Toward a Digital Technology Perspective of Entrepreneurship",
+    "authors": "Nambisan, Satish",
+    "ok": true
+  },
+  {
+    "n": "3",
+    "doi": "10.25300/MISQ/2013/37:2.3",
+    "year": 2013,
+    "vol": "37",
+    "page": "471-482",
+    "container": "MIS Quarterly",
+    "title": "Digital Business Strategy: Toward a Next Generation of Insights",
+    "authors": "Bharadwaj, Anandhi; El Sawy, Omar A.; Pavlou, Paul A.; Venkatraman, N.",
+    "ok": true
+  },
+  {
+    "n": "4",
+    "doi": "10.1016/j.cose.2013.04.004",
+    "year": 2013,
+    "vol": "38",
+    "page": "97-102",
+    "container": "Computers &amp; Security",
+    "title": "From information security to cyber security",
+    "authors": "von Solms, Rossouw; van Niekerk, Johan",
+    "ok": true
+  },
+  {
+    "n": "5",
+    "doi": "10.3390/s23156666",
+    "year": 2023,
+    "vol": "23",
+    "page": "6666",
+    "container": "Sensors",
+    "title": "Digital Transformation and Cybersecurity Challenges for Businesses Resilience: Issues and Recommendations",
+    "authors": "Saeed, Saqib; Altamimi, Salha A.; Alkayyal, Norah A.; Alshehri, Ebtisam",
+    "ok": true
+  },
+  {
+    "n": "6",
+    "doi": "10.1016/j.cose.2021.102267",
+    "year": 2021,
+    "vol": "106",
+    "page": "102267",
+    "container": "Computers &amp; Security",
+    "title": "Enhancing employees information security awareness in private and public organisations: A systematic literature review",
+    "authors": "Khando, Khando; Gao, Shang; Islam, Sirajul M.; Salman, Ali",
+    "ok": true
+  },
+  {
+    "n": "7",
+    "doi": "10.1016/j.ejor.2018.07.021",
+    "year": 2019,
+    "vol": "272",
+    "page": "1109-1119",
+    "container": "European Journal of Operational Research",
+    "title": "What are the actual costs of cyber risk events?",
+    "authors": "Eling, Martin; Wirfs, Jan",
+    "ok": true
+  },
+  {
+    "n": "8",
+    "doi": "10.1145/581271.581274",
+    "year": 2002,
+    "vol": "5",
+    "page": "438-457",
+    "container": "ACM Trans. Inf. Syst. Secur.",
+    "title": "The economics of information security investment",
+    "authors": "Gordon, Lawrence A.; Loeb, Martin P.",
+    "ok": true
+  },
+  {
+    "n": "9",
+    "doi": "10.1016/j.dss.2016.02.012",
+    "year": 2016,
+    "vol": "86",
+    "page": "13-23",
+    "container": "Decision Support Systems",
+    "title": "Decision support approaches for cyber security investment",
+    "authors": "Fielder, Andrew; Panaousis, Emmanouil; Malacaria, Pasquale; Hankin, Chris",
+    "ok": true
+  },
+  {
+    "n": "10",
+    "doi": "10.1016/j.cose.2015.09.009",
+    "year": 2016,
+    "vol": "56",
+    "page": "1-27",
+    "container": "Computers &amp; Security",
+    "title": "A review of cyber security risk assessment methods for SCADA systems",
+    "authors": "Cherdantseva, Yulia; Burnap, Pete; Blyth, Andrew; Eden, Peter",
+    "ok": true
+  },
+  {
+    "n": "11",
+    "doi": "10.6028/NIST.CSWP.29",
+    "year": 2024,
+    "vol": null,
+    "page": null,
+    "container": "",
+    "title": "The NIST Cybersecurity Framework (CSF) 2.0",
+    "authors": "None, None",
+    "ok": true
+  },
+  {
+    "n": "12",
+    "doi": "10.1109/COMST.2015.2494502",
+    "year": 2016,
+    "vol": "18",
+    "page": "1153-1176",
+    "container": "IEEE Commun. Surv. Tutorials",
+    "title": "A Survey of Data Mining and Machine Learning Methods for Cyber Security Intrusion Detection",
+    "authors": "Buczak, Anna L.; Guven, Erhan",
+    "ok": true
+  },
+  {
+    "n": "13",
+    "doi": "10.1109/ACCESS.2018.2836950",
+    "year": 2018,
+    "vol": "6",
+    "page": "35365-35381",
+    "container": "IEEE Access",
+    "title": "Machine Learning and Deep Learning Methods for Cybersecurity",
+    "authors": "Xin, Yang; Kong, Lingshuang; Liu, Zhi; Chen, Yuling",
+    "ok": true
+  },
+  {
+    "n": "14",
+    "doi": "10.1016/j.cose.2019.06.005",
+    "year": 2019,
+    "vol": "86",
+    "page": "147-167",
+    "container": "Computers &amp; Security",
+    "title": "A survey of network-based intrusion detection data sets",
+    "authors": "Ring, Markus; Wunderlich, Sarah; Scheuring, Deniz; Landes, Dieter",
+    "ok": true
+  },
+  {
+    "n": "15",
+    "doi": "10.1109/ACCESS.2022.3204171",
+    "year": 2022,
+    "vol": "10",
+    "page": "93575-93600",
+    "container": "IEEE Access",
+    "title": "Explainable Artificial Intelligence in CyberSecurity: A Survey",
+    "authors": "Capuano, Nicola; Fenza, Giuseppe; Loia, Vincenzo; Stanzione, Claudio",
+    "ok": true
+  },
+  {
+    "n": "16",
+    "doi": "10.1109/ACCESS.2022.3204051",
+    "year": 2022,
+    "vol": "10",
+    "page": "93104-93139",
+    "container": "IEEE Access",
+    "title": "Explainable Artificial Intelligence Applications in Cyber Security: State-of-the-Art in Research",
+    "authors": "Zhang, Zhibo; Hamadi, Hussam Al; Damiani, Ernesto; Yeun, Chan Yeob",
+    "ok": true
+  },
+  {
+    "n": "17",
+    "doi": "10.1016/j.inffus.2019.12.012",
+    "year": 2020,
+    "vol": "58",
+    "page": "82-115",
+    "container": "Information Fusion",
+    "title": "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI",
+    "authors": "Barredo Arrieta, Alejandro; D\u00edaz-Rodr\u00edguez, Natalia; Del Ser, Javier; Bennetot, Adrien",
+    "ok": true
+  },
+  {
+    "n": "18",
+    "doi": "10.1016/j.eswa.2004.08.003",
+    "year": 2005,
+    "vol": "28",
+    "page": "93-103",
+    "container": "Expert Systems with Applications",
+    "title": "Expert system methodologies and applications\u2014a decade review from 1995 to 2004",
+    "authors": "Shu-Hsien Liao, None",
+    "ok": true
+  },
+  {
+    "n": "19",
+    "doi": "10.1109/TKDE.2021.3079836",
+    "year": 2021,
+    "vol": null,
+    "page": "1-1",
+    "container": "IEEE Trans. Knowl. Data Eng.",
+    "title": "Informed Machine Learning - A Taxonomy and Survey of Integrating Prior Knowledge into Learning Systems",
+    "authors": "von Rueden, Laura; Mayer, Sebastian; Beckh, Katharina; Georgiev, Bogdan",
+    "ok": true
+  },
+  {
+    "n": "20",
+    "doi": "10.1016/j.dss.2023.114100",
+    "year": 2024,
+    "vol": "177",
+    "page": "114100",
+    "container": "Decision Support Systems",
+    "title": "A hybrid decision support system for adaptive trading strategies: Combining a rule-based expert system with a deep reinforcement learning strategy",
+    "authors": "Kwon, Yuhee; Lee, Zoonky",
+    "ok": true
+  },
+  {
+    "n": "21",
+    "doi": "10.1016/j.ejor.2021.06.053",
+    "year": 2022,
+    "vol": "297",
+    "page": "1178-1192",
+    "container": "European Journal of Operational Research",
+    "title": "Machine learning for credit scoring: Improving logistic regression with non-linear decision-tree effects",
+    "authors": "Dumitrescu, Elena; Hu\u00e9, Sullivan; Hurlin, Christophe; Tokpavi, Sessi",
+    "ok": true
+  },
+  {
+    "n": "22",
+    "doi": "10.1016/j.ejor.2018.02.009",
+    "year": 2018,
+    "vol": "269",
+    "page": "760-772",
+    "container": "European Journal of Operational Research",
+    "title": "A new hybrid classification algorithm for customer churn prediction based on logistic regression and decision trees",
+    "authors": "De Caigny, Arno; Coussement, Kristof; De Bock, Koen W.",
+    "ok": true
+  },
+  {
+    "n": "23",
+    "doi": "10.1109/TKDE.2012.50",
+    "year": 2013,
+    "vol": "25",
+    "page": "961-973",
+    "container": "IEEE Trans. Knowl. Data Eng.",
+    "title": "A Novel Profit Maximizing Metric for Measuring Classification Performance of Customer Churn Prediction Models",
+    "authors": "Verbraken, Thomas; Verbeke, Wouter; Baesens, Bart",
+    "ok": true
+  },
+  {
+    "n": "24",
+    "doi": "10.1016/j.knosys.2024.112477",
+    "year": 2024,
+    "vol": "305",
+    "page": "112477",
+    "container": "Knowledge-Based Systems",
+    "title": "Backtest overfitting in the machine learning era: A comparison of out-of-sample testing methods in a synthetic controlled environment",
+    "authors": "Arian, Hamid; Norouzi Mobarekeh, Daniel; Seco, Luis",
+    "ok": true
+  },
+  {
+    "n": "25",
+    "doi": "10.1007/978-0-387-84858-7",
+    "year": 2009,
+    "vol": null,
+    "page": null,
+    "container": "Springer Series in Statistics",
+    "title": "The Elements of Statistical Learning",
+    "authors": "Hastie, Trevor; Tibshirani, Robert; Friedman, Jerome",
+    "ok": true
+  },
+  {
+    "n": "26",
+    "doi": "10.1214/aos/1013203451",
+    "year": 2001,
+    "vol": "29",
+    "page": "1189-1232",
+    "container": "Ann. Statist.",
+    "title": "Greedy function approximation: A gradient boosting machine.",
+    "authors": "Friedman, Jerome H.",
+    "ok": true
+  },
+  {
+    "n": "27",
+    "doi": null,
+    "status": "no doi",
+    "line": "F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas,"
+  },
+  {
+    "n": "28",
+    "doi": null,
+    "status": "no doi",
+    "line": "scikit-learn developers, scikit-learn, version 1.9.1 [software], September 2026. https://scikit-learn.org/stable/whats_new/v1.9.html (access"
+  },
+  {
+    "n": "29",
+    "doi": "10.1080/01621459.1927.10502953",
+    "year": 1927,
+    "vol": "22",
+    "page": "209-212",
+    "container": "Journal of the American Statistical Association",
+    "title": "Probable Inference, the Law of Succession, and Statistical Inference",
+    "authors": "Wilson, Edwin B.",
+    "ok": true
+  }
+]
