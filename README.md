@@ -62,6 +62,7 @@ Run `analysis.py` first; `sensitivity.py` imports it. `analysis.py` takes about 
 |---|---|---|
 | `analysis.py` | `results.json`, `table1_descriptives.csv`, `table2_performance.csv`, `Figure_1.png/.pdf`, `Figure_2.png/.pdf` | Figs. 1–2, the first six rows of Table 1, Supplementary Table S1 |
 | `sensitivity.py` | `sensitivity_results.json`, `payoff_sensitivity.csv`, `Figure_3.png/.pdf` | The remaining rows of Table 1, Table 2, Supplementary Note S1 and Fig. S1 |
+| `extensions.py` | `extensions_results.json`, `generator_variants.csv`, `joint_sensitivity.csv`, `Figure_4.png/.pdf` | Revision robustness checks: calibration, cross-validated boosting, generator structures, joint sensitivity ([details](kcid-kbs/README_extensions.md)) |
 
 Fixed settings: population seed 23, bootstrap seed 24 with 1,000 resamples, replication seeds 1–50.
 
