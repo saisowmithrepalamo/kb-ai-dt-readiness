@@ -15,7 +15,7 @@ All data here are simulated. No real organisation, person or breach record is in
 | `results.json`, `sensitivity_results.json`, `extensions_results.json`, `revision_results.json` | Every number reported in the paper |
 | `table1_descriptives.csv`, `table2_performance.csv`, `payoff_sensitivity.csv`, `generator_variants.csv`, `joint_sensitivity.csv`, `revision_seeds.csv` | Result tables written by the scripts |
 | `Figure_1`–`Figure_4` (`.png`, `.pdf`) | The scripts' own plots of the results |
-| `highlights.txt` | Highlights of the first version of the article |
+| `highlights.txt` | The article's highlights (second revision) |
 | [`README_extensions.md`](README_extensions.md) | Details of the four robustness analyses in `extensions.py` |
 
 ## Dataset columns

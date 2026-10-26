@@ -1,5 +1,5 @@
-KCID-AI keeps a logistic risk score and a propositional rule layer separate.
-Cybersecurity indicators raise utility in all 50 regenerated populations.
-A budget-capped expected-utility policy matches its risk with higher utility.
-A rules-plus-capped-EU hybrid gains utility but launches more flagged gaps.
-The rule layer buys rule-consistent decisions, not a better trade-off.
+Cautious rules raise expected utility only where the risk model underestimates risk
+Probability error, not missing rules, explains most of the gap to the oracle policy
+Expert, learned and residual rules all lose where risk is not underestimated
+Rules learned from data rediscover the expert control-gap conditions
+Cybersecurity indicators raise screening utility in all 50 simulated populations
