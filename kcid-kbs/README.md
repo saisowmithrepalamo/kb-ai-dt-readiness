@@ -10,11 +10,12 @@ All data here are simulated. No real organisation, person or breach record is in
 |---|---|
 | [`kcid_synthetic_population_seed23.csv`](kcid_synthetic_population_seed23.csv) | The simulated dataset behind every seed-23 result: 5,000 initiatives, 1,251 held out (448 breaches). Columns are described below |
 | `analysis.py`, `sensitivity.py`, `extensions.py` | The study: data generator, rule layer, models, policies and evaluation |
+| `revision.py` | Second revision: the oracle policy that uses the true breach risk, the decomposition of KCID-AI's gap to it, rule layers learned from the data (from breach outcomes and from the model's residuals) compared with the expert rules at matched coverage, and numerical checks of the paper's Propositions 1-3 |
 | `export_dataset.py` | Writes the dataset above, using `analysis.py` unchanged |
-| `results.json`, `sensitivity_results.json`, `extensions_results.json` | Every number reported in the paper |
-| `table1_descriptives.csv`, `table2_performance.csv`, `payoff_sensitivity.csv`, `generator_variants.csv`, `joint_sensitivity.csv` | Result tables written by the scripts |
+| `results.json`, `sensitivity_results.json`, `extensions_results.json`, `revision_results.json` | Every number reported in the paper |
+| `table1_descriptives.csv`, `table2_performance.csv`, `payoff_sensitivity.csv`, `generator_variants.csv`, `joint_sensitivity.csv`, `revision_seeds.csv` | Result tables written by the scripts |
 | `Figure_1`–`Figure_4` (`.png`, `.pdf`) | The scripts' own plots of the results |
-| `highlights.txt` | The article's highlights |
+| `highlights.txt` | Highlights of the first version of the article |
 | [`README_extensions.md`](README_extensions.md) | Details of the four robustness analyses in `extensions.py` |
 
 ## Dataset columns
@@ -48,12 +49,13 @@ All data here are simulated. No real organisation, person or breach record is in
 
 | Script | Writes | Paper |
 |---|---|---|
-| `analysis.py` | `results.json`, `table1_descriptives.csv`, `table2_performance.csv`, `Figure_1`, `Figure_2` | Table 2 (first six rows), Table 3 (first three comparators), Table A.1, Fig. 2 |
-| `sensitivity.py` | `sensitivity_results.json`, `payoff_sensitivity.csv`, `Figure_3` | Table 2 (remaining six rows), Table 3 (remaining four comparators), Table 4, Fig. B.1 |
-| `extensions.py` | `extensions_results.json`, `generator_variants.csv`, `joint_sensitivity.csv`, `Figure_4` | Tables 5, 6 and C.1, Fig. C.1 |
+| `analysis.py` | `results.json`, `table1_descriptives.csv`, `table2_performance.csv`, `Figure_1`, `Figure_2` | Table 3 (first six rows), Fig. 2, Supplementary Tables S1 and S2 (first three comparators) |
+| `sensitivity.py` | `sensitivity_results.json`, `payoff_sensitivity.csv`, `Figure_3` | Table 3 (remaining rows except the oracle), Table 5, Supplementary Table S2 (remaining comparators) and Fig. S1 |
+| `extensions.py` | `extensions_results.json`, `generator_variants.csv`, `joint_sensitivity.csv`, `Figure_4` | Table 6, Supplementary Tables S4 and S5 and Fig. S2 |
+| `revision.py` | `revision_results.json`, `revision_seeds.csv` | Table 4, the oracle rows of Tables 3 and 5, the decomposition in Section 4.4, Supplementary Table S6, and the numerical checks of Propositions 1-3 |
 | `export_dataset.py` | `kcid_synthetic_population_seed23.csv` | The data behind all seed-23 results |
 
-The rules of Table 1 are defined in `knowledge_rules()` in `analysis.py`. Fig. 1 of the paper is a diagram of the method, not a result. The paper redraws Figs. 2, B.1 and C.1 at journal size from the same JSON values.
+The expert rules of Table 2 are defined in `knowledge_rules()` in `analysis.py`; Table 1 and Fig. 1 of the paper describe related work and the method, not results. The paper redraws Figs. 2, S1 and S2 at journal size from the same JSON values. Table and figure numbers refer to the second revision of the article and its Supplementary Material.
 
 Fixed settings: population seed 23, bootstrap seed 24 with 1,000 resamples, replication seeds 1–50.
 
@@ -69,7 +71,8 @@ export MPLCONFIGDIR="$(pwd)/.mplconfig"
 python analysis.py         # about 20 seconds
 python sensitivity.py      # 2-3 minutes; imports analysis.py
 python extensions.py       # about 35 minutes on 8 cores
+python revision.py         # about 30 seconds on 8 cores
 python export_dataset.py   # a few seconds
 ```
 
-With the pinned versions, the scripts reproduce the committed JSON, CSV and PNG files exactly. The PDF figures differ only in their embedded creation date.
+`extensions.py` and `revision.py` first check that they reproduce the published seed-23 run, and `revision.py` stops if any proposition check fails. With the pinned versions, the scripts reproduce the committed JSON, CSV and PNG files exactly. The PDF figures differ only in their embedded creation date.
